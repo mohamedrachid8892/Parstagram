@@ -17,7 +17,7 @@ import com.parse.FindCallback
 import com.parse.ParseException
 import com.parse.ParseQuery
 
-class HomeFragment : Fragment() {
+open class HomeFragment : Fragment() {
 
     lateinit var rvPosts : RecyclerView
     lateinit var adapter: PostAdapter
@@ -73,7 +73,7 @@ class HomeFragment : Fragment() {
     }
 
     // Query for all posts in the server
-    fun queryPosts() {
+    open fun queryPosts() {
 
         // Specify which class to query
         val query: ParseQuery<Post> = ParseQuery.getQuery(Post::class.java)

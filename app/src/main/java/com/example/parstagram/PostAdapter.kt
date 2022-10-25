@@ -9,6 +9,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.codepath.apps.restclienttemplate.TimeFormatter
+import org.w3c.dom.Text
 
 class PostAdapter(val context: Context, val posts: ArrayList<Post>) : RecyclerView.Adapter<PostAdapter.ViewHolder>() {
 
@@ -36,16 +38,21 @@ class PostAdapter(val context: Context, val posts: ArrayList<Post>) : RecyclerVi
         val tvUsername: TextView
         val ivImage: ImageView
         val etDescription: TextView
+        val tvCreatedAt: TextView
+
 
         init {
             tvUsername = itemView.findViewById(R.id.tvUsername)
             ivImage = itemView.findViewById(R.id.ivPostPicture)
             etDescription = itemView.findViewById(R.id.tvPostDescription)
+            tvCreatedAt = itemView.findViewById(R.id.tvCreatedAt)
         }
 
         fun bind(post: Post) {
             etDescription.text = post.getDescription().toString()
             tvUsername.text = post.getUser()?.username
+
+            tvCreatedAt.text = TimeFormatter.getTimeDifference(post.createdAt.toString())
 
             Glide.with(itemView.context).load(post.getImage()?.url).into(ivImage)
         }

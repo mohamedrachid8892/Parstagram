@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.232" />
+        <entry key="app/src/main/res/drawable/selector_home_button.xml" value="0.232" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.35833333333333334" />
         <entry key="app/src/main/res/layout/fragment_compose.xml" value="0.23233695652173914" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.31620330810546876" />

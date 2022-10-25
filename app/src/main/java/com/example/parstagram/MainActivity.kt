@@ -74,6 +74,7 @@ class MainActivity : AppCompatActivity() {
 
         // Set default fragment
         bottomNavView.selectedItemId = R.id.action_home
+
     }
 
     companion object {
